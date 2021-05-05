@@ -2,8 +2,20 @@
   "name": "kafka-node",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/emreturgutce/kafka-node.git",
+  "author": "Emre Turgut <emrebursalee@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "create:topic": "ts-node src/topic.ts",
+    "send:message": "ts-node src/producer.ts",
+    "subscribe:topic": "ts-node src/consumer.ts"
+  },
   "dependencies": {
     "kafkajs": "^1.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
   }
 }
