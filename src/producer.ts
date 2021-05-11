@@ -14,18 +14,20 @@ async function run() {
 
     await producer.connect();
 
-    const result = await producer.send({
-      topic,
-      messages: [
-        {
-          value,
-        },
-      ],
-    });
+    let i = 0;
 
-    console.log(`Message sent: ${JSON.stringify(result)}`);
+    setInterval(async () => {
+      const result = await producer.send({
+        topic,
+        messages: [
+          {
+            value: `${value}: ${i++}`,
+          },
+        ],
+      });
 
-    await producer.disconnect();
+      console.log(`Message sent: ${JSON.stringify(result)}`);
+    }, 500);
   } catch (error) {
     console.error(`Error occurred: ${error}`);
   }

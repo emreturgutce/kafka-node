@@ -25,8 +25,6 @@ async function run() {
         console.log(`Message Received: ${result.message.value}`);
       },
     });
-
-    await consumer.disconnect();
   } catch (error) {
     console.error(`Error occurred: ${error}`);
   }
