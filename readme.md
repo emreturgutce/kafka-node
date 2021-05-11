@@ -3,7 +3,7 @@
 ## Kafka Nodejs Example
 
 <p align="center">
-    <img src="photos/1.png" />
+    <img src="images/1.png" />
 </p>
 
 ### Starting Kafka and Zookeeper
